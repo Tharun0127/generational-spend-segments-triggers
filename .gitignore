@@ -1,0 +1,19 @@
+# Raw and processed data are rebuilt by run_all.py
+data/raw/
+data/processed/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Credentials
+kaggle.json
+.env
+
+# OS and editor
+.DS_Store
+Thumbs.db
+.vscode/
