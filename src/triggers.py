@@ -226,7 +226,7 @@ def holdout_design(events: pd.DataFrame, customer_month: pd.DataFrame) -> pd.Dat
         n_needed = (Z_ALPHA + Z_POWER) ** 2 * sd**2 * split_factor / (0.10 * mean) ** 2
         rows.append({
             "trigger_name": trig,
-            "fires_in_last_year": fires_per_year,
+            "fires_per_year": fires_per_year,
             "treated": int(round(n_treat)),
             "holdout": int(round(n_hold)),
             "outcome": f"{col} in the 3 months after firing",
@@ -270,6 +270,7 @@ def sensitivity(con) -> pd.DataFrame:
 def run() -> dict:
     con = db.connect()
     sens = sensitivity(con)
+    unadjusted = fetch_events(con, {"portfolio_adjust": 0})
     events = fetch_events(con)  # leaves the default trigger tables in the database
     customer_month = con.execute("SELECT * FROM customer_month").df()
     con.close()
@@ -283,6 +284,7 @@ def run() -> dict:
     results = {
         "events": events,
         "monthly": monthly_backtest(events, months, n_customers),
+        "monthly_unadjusted": monthly_backtest(unadjusted, months, n_customers),
         "summary": summarise(events, n_customers, len(months)),
         "overlap": overlap(events),
         "placebo": placebo_test(customer_month),
@@ -299,6 +301,7 @@ def run() -> dict:
     names = {
         "events": "trigger_events.csv",
         "monthly": "trigger_backtest_monthly.csv",
+        "monthly_unadjusted": "trigger_backtest_monthly_unadjusted.csv",
         "summary": "trigger_summary.csv",
         "overlap": "trigger_overlap.csv",
         "placebo": "trigger_placebo_test.csv",
@@ -308,7 +311,7 @@ def run() -> dict:
         "sensitivity": "trigger_sensitivity.csv",
     }
     for key, filename in names.items():
-        results[key].to_csv(config.OUTPUT_DIR / filename, index=False)
+        results[key].to_csv(config.OUTPUT_DIR / filename, index=False, float_format="%.6f")
     (config.OUTPUT_DIR / "trigger_params.json").write_text(
         json.dumps({**config.TRIGGER_PARAMS, "holdout_share": config.HOLDOUT_SHARE}, indent=2), encoding="utf-8"
     )

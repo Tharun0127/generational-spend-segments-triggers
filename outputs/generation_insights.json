@@ -11,9 +11,9 @@
       "text": "Gen Z makes 42% of its channel-tagged spend online against 33% for Millennials and 30% for Boomers (epsilon squared 0.15)."
     },
     {
-      "title": "Gen Z swipes often for small amounts",
-      "metric": "median_ticket",
-      "text": "Gen Z makes 106 transactions a month at a median ticket of $25, while Boomers make 61 at $42 (epsilon squared 0.07 for frequency, 0.01 for ticket)."
+      "title": "Customers from Gen X down transact about half again as often as Boomers",
+      "metric": "monthly_txns",
+      "text": "Gen X and Millennials make 91 transactions a month and Gen Z 106, against 61 for Boomers and Silent (epsilon squared 0.07); Gen Z's lower median ticket ($25 against $42) is not reliable with 48 customers (95% interval $24 to $54)."
     },
     {
       "title": "Gen X and Millennials carry the most spend per customer",

@@ -118,6 +118,8 @@ def build_insights(summary: pd.DataFrame, tests: pd.DataFrame, cuts: list[int]) 
     med = summary.pivot(index="generation", columns="metric", values="median")
     eff = tests.set_index("metric")["effect_size"]
     p_val = tests.set_index("metric")["p_value"]
+    ci = summary[summary["metric"] == "median_ticket"].set_index("generation")
+    n_gen_z = int(ci.loc["Gen Z", "n_customers"])
 
     def pct(gen: str, metric: str) -> str:
         return f"{med.loc[gen, metric] * 100:.0f}%"
@@ -143,13 +145,15 @@ def build_insights(summary: pd.DataFrame, tests: pd.DataFrame, cuts: list[int]) 
             ),
         },
         {
-            "title": "Gen Z swipes often for small amounts",
-            "metric": "median_ticket",
+            "title": "Customers from Gen X down transact about half again as often as Boomers",
+            "metric": "monthly_txns",
             "text": (
-                f"Gen Z makes {med.loc['Gen Z', 'monthly_txns']:.0f} transactions a month at a median ticket of "
-                f"${med.loc['Gen Z', 'median_ticket']:.0f}, while Boomers make "
-                f"{med.loc['Boomers', 'monthly_txns']:.0f} at ${med.loc['Boomers', 'median_ticket']:.0f} "
-                f"(epsilon squared {eff['monthly_txns']:.2f} for frequency, {eff['median_ticket']:.2f} for ticket)."
+                f"Gen X and Millennials make {med.loc['Millennials', 'monthly_txns']:.0f} transactions a month and "
+                f"Gen Z {med.loc['Gen Z', 'monthly_txns']:.0f}, against {med.loc['Boomers', 'monthly_txns']:.0f} for "
+                f"Boomers and Silent (epsilon squared {eff['monthly_txns']:.2f}); Gen Z's lower median ticket "
+                f"(${med.loc['Gen Z', 'median_ticket']:.0f} against ${med.loc['Boomers', 'median_ticket']:.0f}) is not "
+                f"reliable with {n_gen_z} customers (95% interval ${ci.loc['Gen Z', 'median_ci_low']:.0f} to "
+                f"${ci.loc['Gen Z', 'median_ci_high']:.0f})."
             ),
         },
         {
@@ -200,8 +204,8 @@ def run() -> dict:
         "max_effect_within_age_band": float(kw["effect_within_age_band"].max()),
     }
 
-    summary.to_csv(config.OUTPUT_DIR / "generation_summary.csv", index=False)
-    tests.to_csv(config.OUTPUT_DIR / "generation_tests.csv", index=False)
+    summary.to_csv(config.OUTPUT_DIR / "generation_summary.csv", index=False, float_format="%.6f")
+    tests.to_csv(config.OUTPUT_DIR / "generation_tests.csv", index=False, float_format="%.6f")
     (config.OUTPUT_DIR / "generation_insights.json").write_text(
         json.dumps({"insights": insights, "artifact_check": artifact}, indent=2), encoding="utf-8"
     )
