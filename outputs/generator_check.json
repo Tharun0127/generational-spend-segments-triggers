@@ -1,0 +1,18 @@
+{
+  "cramers_v": {
+    "generation": 0.5231710027455615,
+    "inferred_age_band": 0.8102459315251029,
+    "gender": 0.47972369568432477,
+    "city_size_band": 0.4271538156433273,
+    "transactions_per_day_tier": 0.2374264867215352
+  },
+  "majority_baseline_accuracy": 0.48237885462555063,
+  "demographics_only_accuracy": 0.962558436039099,
+  "demographics_plus_frequency_tier_accuracy": 0.9647683807904803,
+  "note": "Accuracy is 5-fold cross-validated random forest accuracy at predicting the segment from birth year, gender and city population only, then with the transactions-per-day tier added.",
+  "pca_variance_explained": [
+    0.2393,
+    0.1979
+  ],
+  "chosen_k": 5
+}
