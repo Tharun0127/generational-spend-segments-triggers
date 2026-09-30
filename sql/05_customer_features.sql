@@ -37,7 +37,10 @@ tx AS (
         sum(amt)  FILTER (WHERE category = 'food_dining')               AS spend_food_dining,
         count(*)  FILTER (WHERE category = 'food_dining')               AS txns_food_dining,
         count(*)  FILTER (WHERE category = 'travel')                    AS txns_travel,
-        count(*)  FILTER (WHERE category = 'travel' AND amt >= 100)     AS txns_travel_100plus
+        count(*)  FILTER (WHERE category = 'travel' AND amt >= 100)     AS txns_travel_100plus,
+        -- share of calendar years with at least one travel purchase of $100 or more
+        count(DISTINCT year(trans_date)) FILTER (WHERE category = 'travel' AND amt >= 100)
+            / count(DISTINCT year(trans_date))                          AS travel_active_year_share
     FROM transactions
     GROUP BY customer_id
 ),
@@ -107,7 +110,8 @@ SELECT
     tx.txns_travel,
     tx.txns_travel_100plus,
     m.dining_active_month_share,
-    m.travel_active_month_share
+    m.travel_active_month_share,
+    tx.travel_active_year_share
 FROM customers c
 JOIN tx          USING (customer_id)
 JOIN monthly m   USING (customer_id)
