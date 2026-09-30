@@ -1,0 +1,71 @@
+{
+  "insights": [
+    {
+      "title": "Gen Z shops, older generations buy groceries",
+      "metric": "share_shopping",
+      "text": "Gen Z puts 22% of spend into shopping and 9% into grocery, while Boomers put 13% into shopping and 19% into grocery (epsilon squared 0.27 and 0.15)."
+    },
+    {
+      "title": "Gen Z is the most online generation",
+      "metric": "online_share",
+      "text": "Gen Z makes 42% of its channel-tagged spend online against 33% for Millennials and 30% for Boomers (epsilon squared 0.15)."
+    },
+    {
+      "title": "Gen Z swipes often for small amounts",
+      "metric": "median_ticket",
+      "text": "Gen Z makes 106 transactions a month at a median ticket of $25, while Boomers make 61 at $42 (epsilon squared 0.07 for frequency, 0.01 for ticket)."
+    },
+    {
+      "title": "Gen X and Millennials carry the most spend per customer",
+      "metric": "monthly_spend",
+      "text": "Median monthly spend is $6,026 for Millennials and $5,726 for Gen X, against $3,926 for Boomers and $3,973 for Silent (epsilon squared 0.08)."
+    },
+    {
+      "title": "Travel share of wallet does not depend on generation",
+      "metric": "share_travel",
+      "text": "Median travel share of wallet runs from 0.9% for Gen Z to 2.7% for Silent and the difference is not reliable (epsilon squared 0.009, p = 0.09), so a travel benefit should be targeted on behavior, not on age."
+    }
+  ],
+  "artifact_check": {
+    "birth_year_cuts": [
+      1969,
+      1994
+    ],
+    "band_definition": {
+      "Older band": "born 1969 or earlier",
+      "Middle band": "born 1970 to 1994",
+      "Younger band": "born 1995 or later"
+    },
+    "generation_by_band": {
+      "Silent": {
+        "Older band": 92,
+        "Middle band": 0,
+        "Younger band": 0
+      },
+      "Boomers": {
+        "Older band": 223,
+        "Middle band": 0,
+        "Younger band": 0
+      },
+      "Gen X": {
+        "Older band": 87,
+        "Middle band": 192,
+        "Younger band": 0
+      },
+      "Millennials": {
+        "Older band": 0,
+        "Middle band": 248,
+        "Younger band": 18
+      },
+      "Gen Z": {
+        "Older band": 0,
+        "Middle band": 0,
+        "Younger band": 48
+      }
+    },
+    "median_effect_by_generation": 0.08477389382311279,
+    "median_effect_by_age_band": 0.1138613062602088,
+    "median_effect_within_age_band": 0.0034631174677875716,
+    "max_effect_within_age_band": 0.0065797248683439336
+  }
+}
