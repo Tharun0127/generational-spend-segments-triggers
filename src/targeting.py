@@ -90,7 +90,7 @@ def run() -> pd.DataFrame:
         on="customer_id",
     )
     scores = score_segments(customers)
-    scores.to_csv(config.OUTPUT_DIR / "targeting_scores.csv", index=False)
+    scores.to_csv(config.OUTPUT_DIR / "targeting_scores.csv", index=False, float_format="%.6f")
     for key in BENEFITS:
         top = scores[(scores.benefit == key) & (scores["rank"] == 1)].iloc[0]
         print(f"Top segment for {top.benefit_label}: {top.segment_name} (score {top.score:.2f})")

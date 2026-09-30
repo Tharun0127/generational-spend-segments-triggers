@@ -184,9 +184,9 @@ def run() -> dict:
     check["pca_variance_explained"] = coords.explained_variance_ratio_.round(4).tolist()
     check["chosen_k"] = k
 
-    k_table.to_csv(config.OUTPUT_DIR / "k_selection.csv", index=False)
-    profiles.to_csv(config.OUTPUT_DIR / "segment_profiles.csv", index=False)
-    assignments.to_csv(config.OUTPUT_DIR / "segment_assignments.csv", index=False)
+    k_table.to_csv(config.OUTPUT_DIR / "k_selection.csv", index=False, float_format="%.6f")
+    profiles.to_csv(config.OUTPUT_DIR / "segment_profiles.csv", index=False, float_format="%.6f")
+    assignments.to_csv(config.OUTPUT_DIR / "segment_assignments.csv", index=False, float_format="%.6f")
     (config.OUTPUT_DIR / "generator_check.json").write_text(json.dumps(check, indent=2), encoding="utf-8")
     print(f"Segmentation done with k = {k}: " + ", ".join(f"{n} ({c})" for n, c in zip(profiles.segment_name, profiles.n_customers)))
     return {"k_table": k_table, "profiles": profiles, "assignments": assignments, "check": check}
