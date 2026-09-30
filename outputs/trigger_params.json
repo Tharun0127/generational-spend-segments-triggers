@@ -1,0 +1,10 @@
+{
+  "travel_drop_pct": 0.5,
+  "travel_min_base": 200.0,
+  "first_travel_min_history": 3,
+  "dining_min_base": 4,
+  "dining_min_drop": 0.5,
+  "cooldown_months": 2,
+  "portfolio_adjust": 1,
+  "holdout_share": 0.1
+}
