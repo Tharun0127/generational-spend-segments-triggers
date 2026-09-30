@@ -8,7 +8,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.11-3776AB) ![DuckDB](https://img.shields.io/badge/SQL-DuckDB-FFF000) ![scikit--learn](https://img.shields.io/badge/ML-scikit--learn-F7931E) ![Plotly](https://img.shields.io/badge/Charts-Plotly-3F4F75) ![Tests](https://img.shields.io/badge/tests-49%20passing-2ea44f)
 
-**Read the results:** [interactive report](docs/index.html) (GitHub Pages serves it from `/docs`) · [executed notebook](notebooks/analysis.ipynb) · [one-page targeting playbook](docs/targeting_playbook.md) · [data profile](docs/data_profile.md)
+**Read the results:** [live interactive report](https://tharun0127.github.io/generational-spend-segments-triggers/) · [executed notebook](notebooks/analysis.ipynb) · [one-page targeting playbook](docs/targeting_playbook.md) · [data profile](docs/data_profile.md)
 
 ![Top of the interactive report](docs/screenshot.png)
 
@@ -70,7 +70,7 @@ K-means on 16 behavior features (spend, frequency, ticket, share of wallet acros
 
 ## Who gets which benefit
 
-`score = engagement x headroom x value`, for a monthly dining credit and an annual travel credit. Engagement is how often the segment already makes a qualifying purchase, headroom is the room left to grow category share of wallet, and value is spend relative to the top segment. The formula and seven stated weaknesses are in the [report](docs/index.html) and in [`src/targeting.py`](src/targeting.py).
+`score = engagement x headroom x value`, for a monthly dining credit and an annual travel credit. Engagement is how often the segment already makes a qualifying purchase, headroom is the room left to grow category share of wallet, and value is spend relative to the top segment. The formula and seven stated weaknesses are in the [report](https://tharun0127.github.io/generational-spend-segments-triggers/) and in [`src/targeting.py`](src/targeting.py).
 
 ![Targeting score by segment for each benefit](docs/img/targeting_scores.png)
 
