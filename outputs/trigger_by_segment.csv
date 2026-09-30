@@ -1,16 +1,16 @@
 segment_name,trigger_name,fires,customers,spend_at_stake,segment_customers,pct_segment_ever_firing
-Big-Ticket Travelers,dining_cooling,141,80,49385.854481804905,102,0.7843137254901961
-Big-Ticket Travelers,first_travel,3,3,1959.5,102,0.029411764705882353
-Big-Ticket Travelers,travel_drop,131,77,445594.91644129826,102,0.7549019607843137
-Digital Shoppers,dining_cooling,70,45,15788.523534962886,60,0.75
-Digital Shoppers,first_travel,1,1,17.07,60,0.016666666666666666
-Digital Shoppers,travel_drop,60,37,173708.86539305543,60,0.6166666666666667
-Light Home and Dining Spenders,dining_cooling,296,162,118306.08270974088,194,0.8350515463917526
-Light Home and Dining Spenders,first_travel,4,4,36.86,194,0.020618556701030927
-Light Home and Dining Spenders,travel_drop,208,128,506549.3392057924,194,0.6597938144329897
-Mainstream Everyday Spenders,dining_cooling,586,348,150057.64763187038,438,0.7945205479452054
-Mainstream Everyday Spenders,first_travel,15,15,121.06,438,0.03424657534246575
-Mainstream Everyday Spenders,travel_drop,506,326,1285939.1540873237,438,0.7442922374429224
-Premium Household Shoppers,dining_cooling,163,86,61350.674942758444,114,0.7543859649122807
-Premium Household Shoppers,first_travel,3,3,12.790000000000001,114,0.02631578947368421
-Premium Household Shoppers,travel_drop,124,79,280604.9463674784,114,0.6929824561403509
+Big-Ticket Travelers,dining_cooling,141,80,49385.854482,102,0.784314
+Big-Ticket Travelers,first_travel,3,3,1959.500000,102,0.029412
+Big-Ticket Travelers,travel_drop,131,77,445594.916441,102,0.754902
+Digital Shoppers,dining_cooling,70,45,15788.523535,60,0.750000
+Digital Shoppers,first_travel,1,1,17.070000,60,0.016667
+Digital Shoppers,travel_drop,60,37,173708.865393,60,0.616667
+Light Home and Dining Spenders,dining_cooling,296,162,118306.082710,194,0.835052
+Light Home and Dining Spenders,first_travel,4,4,36.860000,194,0.020619
+Light Home and Dining Spenders,travel_drop,208,128,506549.339206,194,0.659794
+Mainstream Everyday Spenders,dining_cooling,586,348,150057.647632,438,0.794521
+Mainstream Everyday Spenders,first_travel,15,15,121.060000,438,0.034247
+Mainstream Everyday Spenders,travel_drop,506,326,1285939.154087,438,0.744292
+Premium Household Shoppers,dining_cooling,163,86,61350.674943,114,0.754386
+Premium Household Shoppers,first_travel,3,3,12.790000,114,0.026316
+Premium Household Shoppers,travel_drop,124,79,280604.946367,114,0.692982

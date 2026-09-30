@@ -1,4 +1,4 @@
 trigger_name,fires_per_year,treated,holdout,outcome,outcome_mean,outcome_sd,min_detectable_lift_abs,min_detectable_lift_pct,fires_needed_for_10pct_lift
-travel_drop,602,542,60,travel_spend in the 3 months after firing,981.0783808437856,2351.5565328461857,894.528032445618,0.911780393811421,50047
-first_travel,26,23,3,travel_spend in the 3 months after firing,420.5526923076923,1093.4641094926076,2001.4955806160588,4.7592028709489,58891
-dining_cooling,720,648,72,dining_spend in the 3 months after firing,907.4067695099818,565.1430967855961,196.57530377758553,0.2166341605361179,3379
+travel_drop,602,542,60,travel_spend in the 3 months after firing,981.078381,2351.556533,894.528032,0.911780,50047
+first_travel,26,23,3,travel_spend in the 3 months after firing,420.552692,1093.464109,2001.495581,4.759203,58891
+dining_cooling,720,648,72,dining_spend in the 3 months after firing,907.406770,565.143097,196.575304,0.216634,3379

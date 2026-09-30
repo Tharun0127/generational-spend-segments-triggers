@@ -36,7 +36,7 @@ dropped from all behavior analysis. `data/raw/` is git-ignored.
 | 6 | Triggers and backtest | sql/06_triggers.sql, src/triggers.py, outputs/trigger_*.csv | `Add trigger rules and monthly backtest` |
 | 7 | Tests | tests/ | `Add tests for feature and trigger logic` |
 | 8 | Notebook and HTML report | notebooks/analysis.ipynb, docs/index.html | `Add notebook and interactive report` |
-| 9 | Written deliverables | README, playbook, INTERVIEW_PREP, RESUME_BULLETS | `Add README, playbook and interview prep` |
+| 9 | Written deliverables | README, targeting playbook | `Add README` |
 | 10 | Rebuild from scratch, run tests, fix drift | | `Rebuild from raw and verify` |
 
 ## Design decisions

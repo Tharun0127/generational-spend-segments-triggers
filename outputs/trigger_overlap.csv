@@ -1,4 +1,4 @@
 trigger_a,trigger_b,same_month_both,same_month_share_of_smaller,customers_ever_both,customers_ever_either,customer_jaccard
-travel_drop,first_travel,0,0.0,13,660,0.019696969696969695
-travel_drop,dining_cooling,64,0.062196307094266275,509,859,0.5925494761350407
-first_travel,dining_cooling,3,0.11538461538461539,17,730,0.023287671232876714
+travel_drop,first_travel,0,0.000000,13,660,0.019697
+travel_drop,dining_cooling,64,0.062196,509,859,0.592549
+first_travel,dining_cooling,3,0.115385,17,730,0.023288

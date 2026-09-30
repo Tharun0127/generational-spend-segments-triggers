@@ -1,12 +1,12 @@
 variant,trigger_name,fires,customers,share_of_fires_in_jan_to_mar,peak_month_fires
-"Naive rule (no portfolio adjustment, no floors, no cooldown)",dining_cooling,2003,835,0.2561158262606091,385
-"Naive rule (no portfolio adjustment, no floors, no cooldown)",travel_drop,4667,878,0.1870580672809085,434
-Default without portfolio adjustment,dining_cooling,1272,734,0.3191823899371069,342
-Default without portfolio adjustment,travel_drop,1035,654,0.1932367149758454,109
-Default,dining_cooling,1256,721,0.19585987261146498,76
-Default,first_travel,26,26,0.0,18
-Default,travel_drop,1029,647,0.17201166180758018,111
-Travel base $500,travel_drop,832,568,0.16947115384615385,87
-"Travel base $1,000",travel_drop,655,487,0.15877862595419848,70
-Dining base 6 transactions,dining_cooling,902,571,0.20842572062084258,63
-First travel after 6 months of history,first_travel,1,1,0.0,1
+"Naive rule (no portfolio adjustment, no floors, no cooldown)",dining_cooling,2003,835,0.256116,385
+"Naive rule (no portfolio adjustment, no floors, no cooldown)",travel_drop,4667,878,0.187058,434
+Default without portfolio adjustment,dining_cooling,1272,734,0.319182,342
+Default without portfolio adjustment,travel_drop,1035,654,0.193237,109
+Default,dining_cooling,1256,721,0.195860,76
+Default,first_travel,26,26,0.000000,18
+Default,travel_drop,1029,647,0.172012,111
+Travel base $500,travel_drop,832,568,0.169471,87
+"Travel base $1,000",travel_drop,655,487,0.158779,70
+Dining base 6 transactions,dining_cooling,902,571,0.208426,63
+First travel after 6 months of history,first_travel,1,1,0.000000,1

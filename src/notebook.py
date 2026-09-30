@@ -249,7 +249,7 @@ def build(execute: bool = True) -> None:
     })
     NOTEBOOK_PATH.parent.mkdir(exist_ok=True)
     if execute:
-        NotebookClient(nb, timeout=600, kernel_name="python3",
+        NotebookClient(nb, timeout=600, kernel_name="python3", record_timing=False,
                        resources={"metadata": {"path": str(NOTEBOOK_PATH.parent)}}).execute()
     nbformat.write(nb, NOTEBOOK_PATH)
     print(f"Wrote {NOTEBOOK_PATH.relative_to(config.ROOT)}" + (" (executed)" if execute else ""))
